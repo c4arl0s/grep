@@ -1,0 +1,38 @@
+History of Unix
+
+The Unix operating system found its beginnings in MULTICS, which stands for Multiplexed Operating and Computing System. The MULTICS project began in the mid 1960s as a joint effort by General Electric, Massachusetts Institute for Technology and Bell Laboratories. In 1969 Bell Laboratories pulled out of the project.
+
+One of Bell Laboratories people involved in the project was Ken Thompson. He liked the potential MULTICS had, but felt it was too complex and that the same thing could be done in simpler way. In 1969 he wrote the first version of Unix, called UNICS. UNICS stood for Uniplexed Operating and Computing System. Although the operating system has changed, the name stuck and was eventually shortened to Unix.
+
+Ken Thompson teamed up with Dennis Ritchie, who wrote the first C compiler. In 1973 they rewrote the Unix kernel in C. The following year a version of Unix known as the Fifth Edition was first licensed to universities. The Seventh Edition, released in 1978, served as a dividing point for two divergent lines of Unix development. These two branches are known as SVR4 (System V) and BSD.
+
+Ken Thompson spent a year's sabbatical with the University of California at Berkeley. While there he and two graduate students, Bill Joy and Chuck Haley, wrote the first Berkely version of Unix, which was distributed to students. This resulted in the source code being worked on and developed by many different people. The Berkeley version of Unix is known as BSD, Berkeley Software Distribution. From BSD came the vi editor, C shell, virtual memory, Sendmail, and support for TCP/IP.
+
+For several years SVR4 was the more conservative, commercial, and well supported. Today SVR4 and BSD look very much alike. Probably the biggest cosmetic difference between them is the way the ps command functions.
+
+The Linux operating system was developed as a Unix look alike and has a user command interface that resembles SVR4.
+
+Figure 1: The Unix Family Tree
+Recommended further information on the history of Unix can be found here: A Brief History of UNIX by Mike Loukides, an editor at O'Reilly and Associates.
+
+The Connection Between Unix and C
+
+At the time the first Unix was written, most operating systems developers believed that an operating system must be written in an assembly language so that it could function effectively and gain access to the hardware. Not only was Unix innovative as an operating system, it was ground-breaking in that it was written in a language (C) that was not an assembly language.
+
+The C language itself operates at a level that is just high enough to be portable to variety of computer hardware. A great deal of publicly available Unix software is distributed as C programs that must be complied before use.
+
+Many Unix programs follow C's syntax. Unix system calls are regarded as C functions.
+
+What this means for Unix system administrators is that an understanding of C can make Unix easier to understand.
+
+Why Use Unix?
+
+One of the biggest reasons for using Unix is networking capability. With other operating systems, additional software must be purchased for networking. With Unix, networking capability is simply part of the operating system. Unix is ideal for such things as world wide e-mail and connecting to the Internet.
+
+Unix was founded on what could be called a "small is good" philosophy. The idea is that each program is designed to do one job well. Because Unix was developed different people with different needs it has grown to an operating system that is both flexible and easy to adapt for specific needs.
+
+Unix was written in a machine independent language. So Unix and unix-like operating systems can run on a variety of hardware. These systems are available from many different sources, some of them at no cost. Because of this diversity and the ability to utilize the same "user-interface" on many different systems, Unix is said to be an open system.
+
+For additional recommended information see Advantages of Unix.
+
+Terms used: operating system, virtual memory, Sendmail, vi editor, shell, TCP/IP, assembly language, C.
