@@ -2,6 +2,88 @@
 
 File pattern searcher
 
+```swift
+SYNOPSIS
+     grep [-abcdDEFGHhIiJLlMmnOopqRSsUVvwXxZz] [-A num] [-B num] [-C num] [-e pattern] [-f file] [--binary-files=value] [--color[=when]]
+          [--colour[=when]] [--context=num] [--label] [--line-buffered] [--null] [pattern] [file ...]
+```
+
+# Example
+
+- Find all occurrences of the pattern ‘patricia’ in a file:
+
+```console
+grep 'patricia' myfile
+```
+- Same as above but looking only for complete words:
+
+```console
+grep -w 'patricia' myfile
+```
+- Count occurrences of the exact pattern ‘FOO’ :
+
+```console
+grep -c FOO myfile
+```
+- Same as above but ignoring case:
+
+```console
+$ grep -c -i FOO myfile
+```
+- Find all occurrences of the pattern ‘.Pp’ at the beginning of a line:
+
+```console
+grep '^\.Pp' myfile
+```
+
+The apostrophes ensure the entire expression is evaluated by grep instead of by the user's shell.  The caret ‘^’ matches the null string at the beginning of a line, and the ‘\’ escapes the ‘.’, which would otherwise match any character.
+
+- Find all lines in a file which do not contain the words ‘foo’ or ‘bar’:
+
+```console
+grep -v -e 'foo' -e 'bar' myfile
+```
+
+- Peruse the file ‘calendar’ looking for either 19, 20, or 25 using extended regular expressions:
+
+```console
+egrep '19|20|25' calendar
+```
+
+-  Show matching lines and the name of the `‘*.h’` files which contain the pattern `‘FIXME’`.  Do the search recursively from the `/usr/src/sys/arm directory`
+
+```console
+grep -H -R FIXME --include="*.h" /usr/src/sys/arm/
+```
+
+- Same as above but show only the name of the matching file:
+
+```console
+grep -l -R FIXME --include="*.h" /usr/src/sys/arm/
+```
+
+- Show lines containing the text ‘foo’.  The matching part of the output is colored and every line is prefixed with the line number and the offset in the file for those lines that matched.
+
+```console
+grep -b --colour -n foo myfile
+```
+- Show lines that match the extended regular expression patterns read from the standard input:
+
+```console
+echo -e 'Free\nBSD\nAll.*reserved' | grep -E -f - myfile
+```
+
+- Show lines from the output of the pciconf(8) command matching the specified extended regular expression along with three lines of leading context and one line of trailing context:
+
+```console
+pciconf -lv | grep -B3 -A1 -E 'class.*=.*storage'
+```
+- Suppress any output and use the exit status to show an appropriate message:
+
+```console
+grep -q foo myfile && echo File matches
+```
+
 # grep -E (OR)
 
 ```console
